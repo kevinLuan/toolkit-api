@@ -8,7 +8,7 @@
 
 ```java
        // 写法一
-           PageFunc.pageFunc(1, 5, Integer.class).count(() -> {
+           Func.pageFunc(1, 5, Integer.class).count(() -> {
              return 100;// dao.count();
            }).find((p) -> {
              return findList(p.getStart(), p.getPageSize());
@@ -19,7 +19,7 @@
    
     
         // 写法二
-            PageFunc.pageFunc(1, 5, Integer.class).count(() -> {
+            Func.pageFunc(1, 5, Integer.class).count(() -> {
               return 100;// 只有这里返回大于零，才会执行下面的find查询
             }).find((page) -> {
               return findList(page.getStart(), page.getPageSize());

@@ -6,12 +6,12 @@ package com.lyh.api.page;
  * @author KEVIN LUAN
  *
  */
-public final class PageFunc {
+public final class Func {
   /**
    * 分页编排函数调用
    * 
    * <pre>
-   * PageFunc.pageFunc(req.getPageNo(), PAGE_SIZE, Promotion.class).count(() -> {
+   * Func.pageFunc(req.getPageNo(), PAGE_SIZE, Promotion.class).count(() -> {
    *   return promotionService.count(...);
    * }).find((p) -> {
    *   return promotionService.find(...);
@@ -32,7 +32,7 @@ public final class PageFunc {
    * 分页编排函数调用
    * 
    * <pre>
-   * PageFunc.pageFunc(req.getPageNo(), PAGE_SIZE, Promotion.class).count(() -> {
+   * Func.pageFunc(req.getPageNo(), PAGE_SIZE, Promotion.class).count(() -> {
    *   return promotionService.count(...);
    * }).find((p) -> {
    *   return promotionService.find(...);

@@ -9,7 +9,7 @@ import org.junit.Test;
 public class TestPageApi {
   @Test
   public void testPage1() {
-    PageFunc.pageFunc(1, 5, Integer.class).count(() -> {
+    Func.pageFunc(1, 5, Integer.class).count(() -> {
       return 100;// dao.count();
     }).find((p) -> {
       return findList(p.getStart(), p.getPageSize());
@@ -21,7 +21,7 @@ public class TestPageApi {
 
   @Test
   public void testPage2() {
-    PageFunc.pageFunc(1, 5, Integer.class).count(() -> {
+    Func.pageFunc(1, 5, Integer.class).count(() -> {
       return 100;// dao.count();
     }).find((page) -> {
       Pagination pagination = page.getPagination();
@@ -34,7 +34,7 @@ public class TestPageApi {
 
   @Test
   public void testZero() {
-    PageFunc.pageFunc(1, 5, Integer.class).count(() -> {
+    Func.pageFunc(1, 5, Integer.class).count(() -> {
       return 0;// 只有这里返回大于零，才会执行下面的find查询
     }).find((p) -> {
       Assert.fail("出错了");
