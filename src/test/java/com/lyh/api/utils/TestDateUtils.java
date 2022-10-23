@@ -29,5 +29,22 @@ public class TestDateUtils {
         System.out.println("添加5秒:" + format.format(date));
         date = DateUtils.addMilliseconds(date, 5000);
         System.out.println("添加5000毫秒:" + format.format(date));
+        System.out.println("-----------------");
+        date = DateUtils.setYears(date, 2020);
+        System.out.println("设置2020年:" + format.format(date));
+        date = DateUtils.setMonths(date, 2);
+        System.out.println("设置2月:" + format.format(date));
+        date = DateUtils.setDays(date, 18);
+        System.out.println("设置18日:" + format.format(date));
+        date = DateUtils.setHours(date, 10);
+        System.out.println("设置10时:" + format.format(date));
+        date = DateUtils.setMinutes(date, 20);
+        System.out.println("设置20分:" + format.format(date));
+        date = DateUtils.setSeconds(date, 59);
+        System.out.println("设置59秒:" + format.format(date));
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss,SSSXXX").format(date));
+        date = DateUtils.setMilliseconds(date, 888);
+        System.out.println("设置毫秒值:");
+        System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss,SSSXXX").format(date));
     }
 }
