@@ -39,7 +39,7 @@ public class PaginationHelper {
     return totalPage;
   }
 
-  public static int ajustPageNo(int pageNo, int totalSize, int pageSize) {
+  public static int adjustPageNo(int pageNo, int totalSize, int pageSize) {
     if (pageNo < 2) {
       return 1;
     } else {
