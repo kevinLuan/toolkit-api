@@ -12,7 +12,7 @@ import org.junit.Test;
  * @author SHOUSHEN LUAN
  *
  */
-public class TestPageIterator {
+public class PageIteratorTest {
   @Test
   public void test1() {
     AtomicInteger count = new AtomicInteger(0);

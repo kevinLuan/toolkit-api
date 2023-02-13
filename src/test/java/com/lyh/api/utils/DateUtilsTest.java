@@ -1,14 +1,19 @@
 package com.lyh.api.utils;
 
+import org.assertj.core.api.Assertions;
+import org.junit.Test;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.ZoneId;
+import java.time.temporal.ChronoField;
 import java.util.Date;
 
 /**
  * @author shoushen.luan
  * @since 2022-10-23
  */
-public class TestDateUtils {
+public class DateUtilsTest {
     public static void main(String[] args) {
         Date date = new Date();
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -47,4 +52,15 @@ public class TestDateUtils {
         System.out.println("设置毫秒值:");
         System.out.println(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss,SSSXXX").format(date));
     }
+
+    @Test
+    public void test() {
+        Date now = new Date();
+        Date tomorrow = DateUtils.addDays(now, 1);
+        Date today = DateUtils.addDays(tomorrow, -1);
+        Assertions.assertThat(today.toInstant().atZone(ZoneId.systemDefault()).get(ChronoField.DAY_OF_MONTH))
+                .isEqualTo(now.toInstant().atZone(ZoneId.systemDefault()).get(ChronoField.DAY_OF_MONTH));
+
+    }
+
 }

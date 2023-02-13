@@ -29,6 +29,19 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>org.assertj</groupId>
+			<artifactId>assertj-core</artifactId>
+			<version>3.19.0</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- 单元测试代码覆盖率 -->
+		<dependency>
+			<groupId>org.jacoco</groupId>
+			<artifactId>jacoco-maven-plugin</artifactId>
+			<version>0.7.8</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>27.1-jre</version>
@@ -78,6 +91,77 @@
 					<source>1.8</source>
 					<target>1.8</target>
 					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<!-- 集成单元测试代码覆盖率 -->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.7.8</version>
+				<executions>
+					<execution>
+						<id>prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>check</id>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- 单元测试代码覆盖率插件 -->
+					<rules>
+						<rule implementation="org.jacoco.maven.RuleConfiguration">
+							<element>BUNDLE</element>
+							<limits>
+								<!-- 指定方法覆盖到应该达到80% -->
+								<limit implementation="org.jacoco.report.check.Limit">
+									<counter>METHOD</counter>
+									<value>COVEREDRATIO</value>
+									<minimum>0.3</minimum>
+								</limit>
+								<!-- 指定指令覆盖到应该达到80% -->
+								<limit implementation="org.jacoco.report.check.Limit">
+									<counter>INSTRUCTION</counter>
+									<value>COVEREDRATIO</value>
+									<minimum>0.2</minimum>
+								</limit>
+								<!-- 指定行覆盖率应该达到80% -->
+								<limit implementation="org.jacoco.report.check.Limit">
+									<counter>LINE</counter>
+									<value>COVEREDRATIO</value>
+									<minimum>0.3</minimum>
+								</limit>
+								<!-- 应该设置为:0 (类覆盖率100%,不应该缺失任何类) -->
+								<limit implementation="org.jacoco.report.check.Limit">
+									<counter>CLASS</counter>
+									<value>MISSEDCOUNT</value>
+									<maximum>0</maximum>
+								</limit>
+							</limits>
+						</rule>
+					</rules>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<forkCount>3</forkCount><!-- 定义单元测试并发线程数 -->
+					<reuseForks>false</reuseForks>
 				</configuration>
 			</plugin>
 		</plugins>
