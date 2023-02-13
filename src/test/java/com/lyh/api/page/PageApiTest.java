@@ -6,7 +6,7 @@ import java.util.Random;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestPageApi {
+public class PageApiTest {
   @Test
   public void testPage1() {
     Func.pageFunc(1, 5, Integer.class).count(() -> {

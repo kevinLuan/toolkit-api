@@ -8,7 +8,7 @@ import java.util.Date;
  * @author shoushen.luan
  * @since 2022-10-23
  */
-public class TestDateUtils {
+public class DateUtilsTest {
     public static void main(String[] args) {
         Date date = new Date();
         DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
