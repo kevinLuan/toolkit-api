@@ -83,7 +83,7 @@ public class PrinterScanService implements Closeable {
      * 获取打印机
      * @throws IOException
      */
-    private Collection<PrinterDevice> getPrinters() throws IOException {
+    public Collection<PrinterDevice> getPrinters() throws IOException {
         return printerDeviceMap.values();
     }
 
@@ -103,22 +103,11 @@ public class PrinterScanService implements Closeable {
      *
      * @throws IOException
      */
-    private void sendDatagram() throws IOException, InterruptedException {
+    public void sendDatagram() throws IOException, InterruptedException {
         for (int i = 0; i < 5; i++) {
             this.doSendDatagram();
             Thread.sleep(10);
         }
     }
 
-    @SneakyThrows
-    public static void main(String[] args) throws SocketException {
-        try (PrinterScanService scanService = new PrinterScanService()) {
-            scanService.sendDatagram();
-            Thread.sleep(1000);
-            System.out.println("扫描打印机设备...");
-            scanService.getPrinters().forEach((device) -> {
-                System.out.println(device.toString());
-            });
-        }
-    }
 }
