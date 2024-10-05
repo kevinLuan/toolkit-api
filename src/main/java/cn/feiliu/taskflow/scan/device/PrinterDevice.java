@@ -1,4 +1,4 @@
-package com.lyh.api.scan.device;
+package cn.feiliu.taskflow.scan.device;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,8 +1,8 @@
-package com.lyh.api.utils;
+package cn.feiliu.taskflow.utils;
 
-import com.lyh.api.page.CountFunc;
-import com.lyh.api.page.FindFunc;
-import com.lyh.api.page.Page;
+import cn.feiliu.taskflow.page.FindFunc;
+import cn.feiliu.taskflow.page.Page;
+import cn.feiliu.taskflow.page.CountFunc;
 
 import java.util.Collections;
 import java.util.Iterator;

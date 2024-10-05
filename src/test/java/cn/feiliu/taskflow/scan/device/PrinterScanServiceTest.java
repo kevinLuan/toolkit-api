@@ -1,4 +1,4 @@
-package com.lyh.api.scan.device;
+package cn.feiliu.taskflow.scan.device;
 
 import lombok.SneakyThrows;
 import static org.assertj.core.api.Assertions.*;

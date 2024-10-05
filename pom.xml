@@ -6,7 +6,7 @@
 	<artifactId>lyh-api</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name>lyh-api</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Tools API</description>
 
 	<properties>
 		<java.version>1.8</java.version>

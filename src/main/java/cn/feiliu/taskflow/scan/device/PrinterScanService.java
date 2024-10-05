@@ -1,4 +1,4 @@
-package com.lyh.api.scan.device;
+package cn.feiliu.taskflow.scan.device;
 
 import com.google.common.primitives.Ints;
 
@@ -14,7 +14,6 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 
 /**
