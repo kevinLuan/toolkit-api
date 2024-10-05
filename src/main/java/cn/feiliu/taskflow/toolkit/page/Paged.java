@@ -1,4 +1,4 @@
-package cn.feiliu.taskflow.page;
+package cn.feiliu.taskflow.toolkit.page;
 
 import java.util.Collections;
 import java.util.List;
@@ -9,10 +9,8 @@ import java.util.function.Function;
 import lombok.Getter;
 
 /**
- * 分页器
- *
- * @param <T>
- * @author KEVIN LUAN
+ * @author KEVIN.LUAN
+ * @since 2024-10-06
  */
 public class Paged<T> {
     // 数据总条数

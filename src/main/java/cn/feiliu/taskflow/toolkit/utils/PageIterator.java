@@ -1,8 +1,8 @@
-package cn.feiliu.taskflow.utils;
+package cn.feiliu.taskflow.toolkit.utils;
 
-import cn.feiliu.taskflow.page.FindFunc;
-import cn.feiliu.taskflow.page.Page;
-import cn.feiliu.taskflow.page.CountFunc;
+import cn.feiliu.taskflow.toolkit.page.FindFunc;
+import cn.feiliu.taskflow.toolkit.page.Page;
+import cn.feiliu.taskflow.toolkit.page.CountFunc;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -14,8 +14,8 @@ import lombok.Getter;
 /**
  * 分页迭代器
  *
- * @param <E>
- * @author KEVIN LUAN
+ * @author KEVIN.LUAN
+ * @since 2024-10-06
  */
 @Getter
 public class PageIterator<E> implements Iterator<E> {

@@ -1,10 +1,9 @@
-package cn.feiliu.taskflow.page;
+package cn.feiliu.taskflow.toolkit.page;
 
 /**
  * 编排函数API
- * 
- * @author KEVIN LUAN
- *
+ * @author kevin.LUAN
+ * @since 2024-10-06
  */
 public final class Func {
   /**

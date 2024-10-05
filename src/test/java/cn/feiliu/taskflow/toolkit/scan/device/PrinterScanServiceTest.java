@@ -1,4 +1,4 @@
-package cn.feiliu.taskflow.scan.device;
+package cn.feiliu.taskflow.toolkit.scan.device;
 
 import lombok.SneakyThrows;
 import static org.assertj.core.api.Assertions.*;

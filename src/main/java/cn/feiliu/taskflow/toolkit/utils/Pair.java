@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package cn.feiliu.taskflow.utils;
+package cn.feiliu.taskflow.toolkit.utils;
 
 /**
  * @author SHOUSHEN.LUAN

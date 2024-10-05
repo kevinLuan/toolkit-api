@@ -1,4 +1,4 @@
-package cn.feiliu.taskflow.scan.device;
+package cn.feiliu.taskflow.toolkit.scan.device;
 
 import java.util.HashMap;
 import java.util.Map;
