@@ -1,3 +1,17 @@
+/*
+ * Copyright 2024 Taskflow, Inc.
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package cn.feiliu.taskflow.toolkit.utils;
 
 import cn.feiliu.taskflow.toolkit.page.FindFunc;
@@ -22,25 +36,20 @@ public class PageIterator<E> implements Iterator<E> {
 
     public Page getPage() {
         int start = (currentPn - 1) * pageSize;
-        return Page.builder()
-                .start(start)
-                .pageSize(pageSize)
-                .totalItem(totalItem)
-                .totalPn(totalPn)
-                .currentPn(currentPn)
-                .build();
+        return Page.builder().start(start).pageSize(pageSize).totalItem(totalItem).totalPn(totalPn)
+            .currentPn(currentPn).build();
     }
 
     private final Integer totalItem;
     private final Integer totalPn;
-    private Integer pageSize;
+    private Integer       pageSize;
 
     // 当前页
-    private Integer currentPn = 0;
-    private List<?> items = Collections.EMPTY_LIST;
-    private int itemPos = -1;
-    private AtomicLong itemPosition = new AtomicLong();
-    private FindFunc func;
+    private Integer       currentPn    = 0;
+    private List<?>       items        = Collections.EMPTY_LIST;
+    private int           itemPos      = -1;
+    private AtomicLong    itemPosition = new AtomicLong();
+    private FindFunc      func;
 
     protected PageIterator(int totalItem, int pageSize, FindFunc func) {
         if (func == null) {

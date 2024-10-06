@@ -25,4 +25,4 @@
 /.nb-gradle/
 
 .mvn/
-
+.flattened-pom.xml
