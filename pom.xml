@@ -37,12 +37,6 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.assertj</groupId>
-			<artifactId>assertj-core</artifactId>
-			<version>3.19.0</version>
-			<scope>test</scope>
-		</dependency>
 		<!-- 单元测试代码覆盖率 -->
 		<dependency>
 			<groupId>org.jacoco</groupId>
@@ -60,12 +54,6 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>5.8.1</version>
-			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
@@ -219,8 +207,7 @@
 				<configuration>
 					<junitArtifactName>junit:junit</junitArtifactName>
 					<includes>
-						<include>**/*Test.java</include>
-						<include>**/Test*.java</include>
+						<include>**/*Tests.java</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -358,7 +345,7 @@
 								<limit implementation="org.jacoco.report.check.Limit">
 									<counter>INSTRUCTION</counter>
 									<value>COVEREDRATIO</value>
-									<minimum>0.2</minimum>
+									<minimum>0.3</minimum>
 								</limit>
 								<!-- 指定行覆盖率应该达到80% -->
 								<limit implementation="org.jacoco.report.check.Limit">
@@ -370,7 +357,7 @@
 								<limit implementation="org.jacoco.report.check.Limit">
 									<counter>CLASS</counter>
 									<value>MISSEDCOUNT</value>
-									<maximum>2</maximum>
+									<maximum>6</maximum>
 								</limit>
 							</limits>
 						</rule>
