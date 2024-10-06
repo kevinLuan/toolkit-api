@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.taskflow</groupId>
 	<artifactId>toolkit-api</artifactId>
-	<version>0.1.0</version>
+	<version>0.2.0</version>
 	<name>toolkit-api</name>
 	<description>taskflow toolkit api</description>
 	<url>https://github.com/kevinLuan/toolkit-api</url>
@@ -60,6 +60,12 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.8.1</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 

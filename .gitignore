@@ -26,3 +26,4 @@
 
 .mvn/
 .flattened-pom.xml
+.vscode/
