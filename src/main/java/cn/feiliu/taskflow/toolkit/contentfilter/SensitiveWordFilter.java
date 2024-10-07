@@ -14,7 +14,7 @@
  */
 package cn.feiliu.taskflow.toolkit.contentfilter;
 
-import java.util.LinkedList;
+import java.util.List;
 
 public class SensitiveWordFilter {
     private final SensitiveKeywords root;
@@ -37,7 +37,7 @@ public class SensitiveWordFilter {
      * @param str 文本
      * @return 存在的敏感词token
      */
-    public LinkedList<KeywordTokenizer> parser(String str) {
+    public List<KeywordToken> parser(String str) {
         return new SensitiveWordParser().parser(str, root);
     }
 

@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cn.taskflow</groupId>
 	<artifactId>toolkit-api</artifactId>
-	<version>0.2.0</version>
+	<version>0.2.1</version>
 	<name>toolkit-api</name>
 	<description>taskflow toolkit api</description>
 	<url>https://github.com/kevinLuan/toolkit-api</url>

@@ -23,7 +23,7 @@ import lombok.Getter;
  * @since 2024-10-06
  */
 @Getter
-public class KeywordTokenizer {
+public class KeywordToken {
     private final String token;
     private final int    startPosition;
 
@@ -33,7 +33,7 @@ public class KeywordTokenizer {
      * @param token The keyword token.
      * @param startPosition The starting position of the token in the original text.
      */
-    public KeywordTokenizer(String token, int startPosition) {
+    public KeywordToken(String token, int startPosition) {
         this.token = token;
         this.startPosition = startPosition;
     }

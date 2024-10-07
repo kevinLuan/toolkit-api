@@ -18,7 +18,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Test class for SensitiveKeywords and SensitiveWordFilter
@@ -40,7 +40,7 @@ public class SensitiveKeywordsTests {
 
     @Test
     public void testParserWithAllKeywords() {
-        LinkedList<KeywordTokenizer> list = filterService.parser(testString);
+        List<KeywordToken> list = filterService.parser(testString);
         assertEquals("Should find 9 sensitive keywords", 9, list.size());
 
         // Verify some specific tokens

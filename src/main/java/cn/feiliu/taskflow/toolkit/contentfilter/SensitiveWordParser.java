@@ -18,7 +18,7 @@ import java.util.LinkedList;
 
 public class SensitiveWordParser {
 
-    private LinkedList<KeywordTokenizer> wordTokens = new LinkedList<>();
+    private LinkedList<KeywordToken> wordTokens = new LinkedList<>();
     private String                       content;
 
     public SensitiveWordParser search(String content, SensitiveKeywords root) {
@@ -37,7 +37,7 @@ public class SensitiveWordParser {
                 i++;
                 count = 0;
             } else if (node.isEnd()) {
-                KeywordTokenizer wordToken = new KeywordTokenizer(node.getKeyword(), i);
+                KeywordToken wordToken = new KeywordToken(node.getKeyword(), i);
                 wordTokens.add(wordToken);
 
                 if (node.isLeaf()) {
@@ -57,7 +57,7 @@ public class SensitiveWordParser {
     public String process() {
         StringBuilder builder = new StringBuilder(this.content);
         while (!wordTokens.isEmpty()) {
-            KeywordTokenizer token = wordTokens.removeLast();
+            KeywordToken token = wordTokens.removeLast();
             if (builder.length() >= token.getEndPosition()) {
                 builder.replace(token.getStartPosition(), token.getEndPosition(), "*");
             }
@@ -71,7 +71,7 @@ public class SensitiveWordParser {
      * @param node
      * @return
      */
-    public LinkedList<KeywordTokenizer> parser(String str, SensitiveKeywords node) {
+    public LinkedList<KeywordToken> parser(String str, SensitiveKeywords node) {
         search(str, node);
         return wordTokens;
     }
