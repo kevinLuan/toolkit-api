@@ -19,7 +19,7 @@ import java.util.LinkedList;
 public class SensitiveWordParser {
 
     private LinkedList<KeywordToken> wordTokens = new LinkedList<>();
-    private String                       content;
+    private String                   content;
 
     public SensitiveWordParser search(String content, SensitiveKeywords root) {
         this.content = content;
