@@ -23,6 +23,12 @@
 		<gpg.homedir>/Users/kevin/.gnupg</gpg.homedir>
 	</properties>
 	<dependencies>
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.2</version>
+			<scope>test</scope>
+		</dependency>
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>

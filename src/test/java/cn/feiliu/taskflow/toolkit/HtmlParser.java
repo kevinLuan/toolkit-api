@@ -9,8 +9,8 @@ import java.util.regex.Pattern;
  * @since 2024-10-07
  */
 public class HtmlParser {
-    static String path = "/Users/kevin/Desktop/web/";
-    static String dist = "/Users/kevin/Desktop/web/dist";
+    static String path = "/Users/kevin/java_home/web/";
+    static String dist = "/Users/kevin/java_home/web/dist";
 
     public static void main(String[] args) throws IOException {
         File[] files = new File(path).listFiles(new FilenameFilter() {
